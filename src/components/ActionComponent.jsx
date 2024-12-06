@@ -8,7 +8,7 @@ class ActionComponent extends Component {
     if(this.props.pending == true) {
       return(
         <React.Fragment>
-          <CompleteTaskButtonComponent index={this.props.index} />
+          <CompleteTaskButtonComponent index={this.props.index} onCompleteTask={this.props.onCompleteTask} />
           <DeleteTaskButtonComponent onDeleteTask={this.props.onDeleteTask} index={this.props.index} />
         </React.Fragment>
       );

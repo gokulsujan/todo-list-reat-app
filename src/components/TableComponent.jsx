@@ -21,7 +21,7 @@ class TableComponent extends Component {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{task.task}</td>
-                  <td>{<ActionComponent onDeleteTask={this.props.onDeleteTask} pending={this.props.pending} index={index} />}</td>
+                  <td>{<ActionComponent onDeleteTask={this.props.onDeleteTask} onCompleteTask={this.props.onCompleteTask} pending={this.props.pending} index={index} />}</td>
                 </tr>
               ))}
             </tbody>

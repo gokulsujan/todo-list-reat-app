@@ -6,10 +6,14 @@ class CompleteTaskButtonComponent extends Component {
   state = {  } 
   render() { 
     return (
-      <button type="button" className="btn btn-success m-2">
+      <button onClick={this.handleCompleteTask} type="button" className="btn btn-success m-2">
         <FontAwesomeIcon icon={faCheck} style={{ color: 'white', cursor: 'pointer' }} />
       </button>
     );
+  }
+
+  handleCompleteTask=()=>{
+    this.props.onCompleteTask(this.props.index);
   }
 }
  

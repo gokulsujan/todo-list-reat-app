@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavbarComponent tasks={this.state.tasks}/>
-        <TasksComponent tasks={this.state.tasks} onCreateTask={this.handleCreateTask} onDeleteTask={this.handleDeleteTask}/>
+        <TasksComponent tasks={this.state.tasks} onCreateTask={this.handleCreateTask} onDeleteTask={this.handleDeleteTask} onCompleteTask={this.handleCompleteTask} />
       </React.Fragment>
     );
   }
@@ -25,6 +25,14 @@ class App extends Component {
   handleDeleteTask = (index) => {
     const tasks = [...this.state.tasks];
     tasks.splice(index, 1);
+    this.setState({tasks});
+  }
+
+  handleCompleteTask = (index) => {
+    const tasks = [...this.state.tasks];
+    let completedTask = tasks[index];
+    tasks.splice(index, 1);
+    tasks.push({task:completedTask.task, status:"completed"})
     this.setState({tasks});
   }
 }
