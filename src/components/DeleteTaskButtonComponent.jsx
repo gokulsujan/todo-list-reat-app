@@ -12,7 +12,7 @@ class DeleteTaskButtonComponent extends Component {
   }
 
   handleDelete = () => {
-    this.props.onDeleteTask(this.props.index)
+    this.props.onDeleteTask(this.props.task)
   }
 }
  

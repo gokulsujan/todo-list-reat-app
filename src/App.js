@@ -22,13 +22,15 @@ class App extends Component {
     this.setState({tasks});
   }
 
-  handleDeleteTask = (index) => {
+  handleDeleteTask = (task) => {
+    let index = this.state.tasks.indexOf(task);
     const tasks = [...this.state.tasks];
     tasks.splice(index, 1);
     this.setState({tasks});
   }
 
-  handleCompleteTask = (index) => {
+  handleCompleteTask = (task) => {
+    let index = this.state.tasks.indexOf(task);
     const tasks = [...this.state.tasks];
     let completedTask = tasks[index];
     tasks.splice(index, 1);

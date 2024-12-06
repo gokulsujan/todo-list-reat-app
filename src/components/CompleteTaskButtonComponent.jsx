@@ -13,7 +13,7 @@ class CompleteTaskButtonComponent extends Component {
   }
 
   handleCompleteTask=()=>{
-    this.props.onCompleteTask(this.props.index);
+    this.props.onCompleteTask(this.props.task);
   }
 }
  
