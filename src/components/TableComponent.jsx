@@ -20,7 +20,7 @@ class TableComponent extends Component {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{task.task}</td>
-                  <td>{this.props.actions}</td>
+                  <td>{this.props.children}</td>
                 </tr>
               ))}
             </tbody>
