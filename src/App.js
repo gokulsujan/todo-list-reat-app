@@ -11,9 +11,15 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavbarComponent tasks={this.state.tasks}/>
-        <TasksComponent tasks={this.state.tasks}/>
+        <TasksComponent tasks={this.state.tasks} onCreateTask={this.handleCreateTask}/>
       </React.Fragment>
     );
+  }
+
+  handleCreateTask = (taskStr) =>{
+    const tasks = this.state.tasks;
+    tasks.push({task: taskStr, status: "pending"});
+    this.setState(tasks);
   }
 }
 

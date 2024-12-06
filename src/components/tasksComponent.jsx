@@ -6,7 +6,7 @@ class TasksComponent extends Component {
   render() { 
     return (
       <div className="container mt-5">
-        <CreateTaskComponent />
+        <CreateTaskComponent onCreateTask={this.props.onCreateTask} />
         <TableComponent heading ="Sampple Heading" tasks={this.props.tasks} />
       </div>
     );
