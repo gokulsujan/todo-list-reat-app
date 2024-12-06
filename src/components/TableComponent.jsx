@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ActionComponent from './ActionComponent';
 
 class TableComponent extends Component {
   state = {  } 
@@ -20,7 +21,7 @@ class TableComponent extends Component {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{task.task}</td>
-                  <td>{this.props.children}</td>
+                  <td>{<ActionComponent onDeleteTask={this.props.onDeleteTask} pending={this.props.pending} index={index} />}</td>
                 </tr>
               ))}
             </tbody>
